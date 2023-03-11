@@ -12,3 +12,4 @@ Map.addLayer(wp);
 var buffer_wp = wp.geometry().buffer(2000);
 Map.addLayer(buffer_wp, {color: 'Purple'}, 'buffer');
 //buffer colour is purple
+
