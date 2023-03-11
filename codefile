@@ -1,0 +1,14 @@
+//setting the center around wasgamuwa park 
+Map.setCenter(80.9195, 7.7504, 10);
+
+//wasgamuwa park dataset was imported using assets
+var wp = ee.FeatureCollection("users/umeshikasulakshani/wasgamuwa_park");
+//wp= wasgamuwa park
+
+//plotting wasgamuwa park area on the map
+Map.addLayer(wp); 
+
+//adding the 2km buffer around the park
+var buffer_wp = wp.geometry().buffer(2000);
+Map.addLayer(buffer_wp, {color: 'Purple'}, 'buffer');
+//buffer colour is purple
